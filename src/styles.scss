@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+    background-color: aqua;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: aqua;
+}
+
+ul {
+    list-style-type: none;
+}
