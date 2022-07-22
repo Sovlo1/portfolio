@@ -1,12 +1,13 @@
 <header>
-    <div class="d-flex justify-space-between flex-align-center">
+    <div class="d-flex justify-space-between flex-align-center fill">
         <h1>Raphael Alves, Developpeur Web Junior</h1>
         <nav>
-            <ul class="d-flex">
-                <li>Parcours</li>
-                <li>Portfolio</li>
-                <li>A propos</li>
-                <li>Contact</li>
+            <ul class="d-flex flex-align-center">
+                <li class="btn cursor-pointer" (click)="goToMain('main')">Parcours</li>
+                <li class="btn cursor-pointer" (click)="goToProjects('projects')">Portfolio</li>
+                <li class="btn cursor-pointer" (click)="goToAbout('about')">A propos</li>
+                <li class="btn cursor-pointer" (click)="goToContact('contact')">Contact</li>
+                <li class="icons cursor-pointer"><i class="fa-solid fa-moon"></i></li>
             </ul>
         </nav>
     </div>
