@@ -1,7 +1,25 @@
-<section>
+<header>
+    <div class="d-flex justify-space-between flex-align-center fill">
+        <h1>Raphael Alves, Developpeur Web Junior</h1>
+        <nav>
+            <ul class="d-flex flex-align-center">
+                <li class="btn cursor-pointer" (click)="goTo('main')">Parcours</li>
+                <li class="btn cursor-pointer" (click)="goTo('projects')">Portfolio</li>
+                <li class="btn cursor-pointer" (click)="goTo('about')">A propos</li>
+                <li class="btn cursor-pointer" (click)="goTo('contact')">Contact</li>
+                <li class="icons cursor-pointer" (click)="openMenu()" (clickOutside)="closeMenu()"
+                    [exclude]="'.incroyable'" [excludeBeforeClick]=true><i class="fa-solid fa-moon"></i></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="dark__mode__menu" *ngIf="isMenuOpen">
+        <button>Mode sombre <i class="fa-solid fa-check"></i></button>
+    </div>
+</header>
+<section id="main">
     <div class="d-flex flex-align-center justify-space-around fill">
         <div class="about">
-            <h2>Raphael Alves, Développeur Web Junior</h2>
+            <h2 class="incroyable">Raphael Alves, Développeur Web Junior</h2>
             <div class="portrait">
                 <img class="portrait__image" src="../../assets/test.jpg" alt="photo de Raphael Alves">
             </div>
@@ -18,3 +36,56 @@
         </article>
     </div>
 </section>
+<section id="projects">
+    <div class="d-flex flex-align-center fill">
+        <div class="d-flex flex-column flex-align-center">
+            <h2>Projets passés et en cours:</h2>
+            <div class="container d-flex flex-wrap">
+                <div *ngFor="let work of works;let i = index" class="container__projects">
+                    <div class=" d-flex flex-column" (mouseover)="isHovered(i)" (mouseleave)="isNotHovered()">
+                        <div *ngIf="(hovered && i === this.index)" class="container__projects__box">
+                            <p class="container__projects__box__description fill w-fill">{{ work.bigDescription}} </p>
+                        </div>
+                        <img class="container__projects__image" src="{{ work.image }}" alt="">
+                        <div class="container__projects__about">
+                            <h3>{{ work.name }} </h3>
+                            <p>{{work.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div class="d-flex flex-align-center justify-space-around fill">
+        <div class="about">
+            <div class="portrait">
+                <img class="portrait__image" src="../../assets/test.jpg" alt="photo de Raphael Alves">
+            </div>
+        </div>
+        <article class="education">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nisl sapien,
+            condimentum sit amet orci nec, tempus luctus nibh. Fusce pellentesque malesuada enim, sed tempor turpis
+            dapibus placerat. Maecenas non mi purus. Fusce eget facilisis sapien. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia curae; Etiam efficitur euismod tristique. Integer lobortis
+            libero vitae sem porta pulvinar. Fusce id commodo sapien, sed tempus urna. In hac habitasse platea dictumst.
+            Morbi gravida massa sit amet nisl congue hendrerit.
+        </article>
+    </div>
+</section>
+<section id="contact">
+    <div class="d-flex flex-align-center fill">
+        <div class="d-flex flex-column flex-align-center w-fill">
+            <h2>Pour toute demande professionnelle:</h2>
+            <ul>
+                <li><i class="fa-regular fa-envelope m-10"></i>Email: machin@machin.com</li>
+                <li><i class="fa-solid fa-phone m-10"></i>Téléphone: 01 23 45 67 89</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="d-flex flex-align-center justify-center fill"><i class="fa-brands fa-linkedin m-10"></i><i
+            class="fa-brands fa-github m-10"></i>
+    </div>
+</footer>
