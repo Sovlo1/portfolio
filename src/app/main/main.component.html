@@ -8,14 +8,14 @@
                 <li class="btn cursor-pointer" (click)="goTo('about')">A propos</li>
                 <li class="btn cursor-pointer" (click)="goTo('contact')">Contact</li>
                 <li class="icons cursor-pointer" (click)="openMenu()" (clickOutside)="closeMenu()"
-                    [exclude]="'.incroyable'" [excludeBeforeClick]=true><i class="fa-solid fa-moon"></i></li>
+                    [exclude]="'.dark__mode__menu'" [excludeBeforeClick]=true><i class="fa-solid fa-moon"></i></li>
             </ul>
         </nav>
     </div>
-    <div class="dark__mode__menu" *ngIf="isMenuOpen">
-        <button>Mode sombre <i class="fa-solid fa-check"></i></button>
-    </div>
 </header>
+<div class="dark__mode__menu d-flex flex-align-center cursor-pointer" *ngIf="isMenuOpen" (click)="test()">
+    <button class="dark__mode__menu__button cursor-pointer">Mode sombre: </button><i class="fa-solid fa-check"></i>
+</div>
 <section id="main">
     <div class="d-flex flex-align-center justify-space-around fill">
         <div class="about">

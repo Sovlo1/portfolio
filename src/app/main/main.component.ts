@@ -1,6 +1,7 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Work } from '../models/work.models';
+import { DarkModeService } from '../services/dark-mode.service';
 import { WorksService } from '../services/works.service';
 
 @Component({
@@ -13,15 +14,21 @@ export class MainComponent implements OnInit {
   public works!: Array<Work>;
   public index?: number;
   public isMenuOpen: boolean = false;
+  public dark!: boolean;
 
   constructor(
     private projects: WorksService,
-    private viewPortScroller: ViewportScroller
+    private viewPortScroller: ViewportScroller,
+    private darkMode: DarkModeService
   ) {}
 
   ngOnInit(): void {
     this.works = this.projects.projects;
     this.viewPortScroller.setOffset([0, 50]);
+    this.dark = this.darkMode.checkDarkMode();
+    if (this.dark === true) {
+      document.body.classList.toggle('light-mode');
+    }
   }
 
   isHovered(i: number): void {
@@ -51,5 +58,10 @@ export class MainComponent implements OnInit {
       this.isMenuOpen = false;
       console.log(this.isMenuOpen);
     }
+  }
+
+  test(): void {
+    this.darkMode.changeMode();
+    document.body.classList.toggle('light-mode');
   }
 }

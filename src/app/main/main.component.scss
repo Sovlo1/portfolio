@@ -76,6 +76,19 @@ header {
 
 .dark__mode__menu {
     position: absolute;
-    bottom: -46px;
+    z-index: 20;
+    top: 50px;
     right: 0;
+    height: 42px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 0 0 5px 5px;
+    animation: slide 0.5s forwards;
+    &__button {
+        background-color: rgb(80, 80, 80);
+        border: none;
+        margin: 0;
+    }
+    i {
+        font-size: 24px;
+    }
 }
