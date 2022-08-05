@@ -13,10 +13,11 @@ export class DarkModeService {
     }
   }
 
-  changeMode() {
+  changeMode(): boolean {
     let darkMode = JSON.parse(window.localStorage.getItem('light-mode')!);
     darkMode = !darkMode;
     window.localStorage.setItem('light-mode', JSON.stringify(darkMode));
+    return darkMode;
   }
 
   constructor() {}

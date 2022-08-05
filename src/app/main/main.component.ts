@@ -15,6 +15,8 @@ export class MainComponent implements OnInit {
   public index?: number;
   public isMenuOpen: boolean = false;
   public dark!: boolean;
+  public animation: boolean = false;
+  public animationOff: boolean = false;
 
   constructor(
     private projects: WorksService,
@@ -50,18 +52,22 @@ export class MainComponent implements OnInit {
 
   openMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
-    console.log(this.isMenuOpen);
+    this.animation = !this.animation;
   }
 
   closeMenu(): void {
     if (this.isMenuOpen === true) {
-      this.isMenuOpen = false;
-      console.log(this.isMenuOpen);
+      this.animation = false;
+      this.animationOff = true;
+      setTimeout(() => {
+        this.isMenuOpen = false;
+      }, 500);
     }
+    this.animationOff = false;
   }
 
   test(): void {
-    this.darkMode.changeMode();
+    this.dark = this.darkMode.changeMode();
     document.body.classList.toggle('light-mode');
   }
 }

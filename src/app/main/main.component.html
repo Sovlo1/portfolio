@@ -1,4 +1,4 @@
-<header>
+<header [ngClass]="{'light-mode': dark}">
     <div class="d-flex justify-space-between flex-align-center fill">
         <h1>Raphael Alves, Developpeur Web Junior</h1>
         <nav>
@@ -13,8 +13,11 @@
         </nav>
     </div>
 </header>
-<div class="dark__mode__menu d-flex flex-align-center cursor-pointer" *ngIf="isMenuOpen" (click)="test()">
-    <button class="dark__mode__menu__button cursor-pointer">Mode sombre: </button><i class="fa-solid fa-check"></i>
+<div class="dark__mode__menu d-flex flex-align-center cursor-pointer" *ngIf="isMenuOpen" [ngClass]="{'light-mode': dark,
+                'dark__mode__menu__disappear': animationOff,
+                'dark__mode__menu__appear': animation}" (click)="test()">
+    <button class="dark__mode__menu__button cursor-pointer" [ngClass]="{'light-mode': dark}">Mode sombre: </button><i
+        class="fa-solid fa-check" *ngIf="!dark"></i><i class="fa-solid fa-xmark" *ngIf="dark"></i>
 </div>
 <section id="main">
     <div class="d-flex flex-align-center justify-space-around fill">
@@ -84,7 +87,7 @@
         </div>
     </div>
 </section>
-<footer>
+<footer [ngClass]="{'light-mode': dark}">
     <div class="d-flex flex-align-center justify-center fill"><i class="fa-brands fa-linkedin m-10"></i><i
             class="fa-brands fa-github m-10"></i>
     </div>
