@@ -8,16 +8,18 @@
                 <li class="btn cursor-pointer" (click)="goTo('about')">A propos</li>
                 <li class="btn cursor-pointer" (click)="goTo('contact')">Contact</li>
                 <li class="icons cursor-pointer" (click)="openMenu()" (clickOutside)="closeMenu()"
-                    [exclude]="'.dark__mode__menu'" [excludeBeforeClick]=true><i class="fa-solid fa-moon"></i></li>
+                    [exclude]="'.dark__mode__menu,.dark__mode__menu__button--icon'" [excludeBeforeClick]=true><i class="fa-solid fa-moon"></i></li>
             </ul>
         </nav>
     </div>
 </header>
-<div class="dark__mode__menu d-flex flex-align-center cursor-pointer" *ngIf="isMenuOpen" [ngClass]="{'light-mode': dark,
+<div class="dark__mode__menu d-flex flex-align-center cursor-pointer" [ngClass]="{'light-mode': dark,
                 'dark__mode__menu__disappear': animationOff,
                 'dark__mode__menu__appear': animation}" (click)="test()">
-    <button class="dark__mode__menu__button cursor-pointer" [ngClass]="{'light-mode': dark}">Mode sombre: </button><i
-        class="fa-solid fa-check" *ngIf="!dark"></i><i class="fa-solid fa-xmark" *ngIf="dark"></i>
+    <button class="dark__mode__menu__button cursor-pointer" [ngClass]="{'light-mode': dark}">Mode sombre: </button>
+    <div class="dark__mode__menu__button--icon"><i
+        class="fa-solid fa-check" [style.display]="dark ? 'block' : 'none'"></i><i class="fa-solid fa-xmark" [style.display]="dark ? 'none' : 'block'"></i>
+    </div>
 </div>
 <section id="main">
     <div class="d-flex flex-align-center justify-space-around fill">
