@@ -1,4 +1,5 @@
 body {
+    display: flex;
     --background-color: rgb(19, 19, 19);
     --color: rgb(226, 226, 226);
 }
@@ -109,6 +110,8 @@ ul {
 
 section {
     height: 100vh;
+    min-height: 900px;
+    flex: 1;
 }
 
 .btn {
@@ -127,10 +130,34 @@ section {
     0% {
         transform: translateY(-100px);
     }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes slide-off {
-    100% {
+    0% {
         transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+// Scrollbar //
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #494949;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(187, 187, 187);
+    border-radius: 5px;
+    &:hover {
+        background: rgb(138, 138, 138);
     }
 }

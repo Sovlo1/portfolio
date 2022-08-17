@@ -76,16 +76,15 @@ i {
     z-index: 20;
     top: 50px;
     right: 0;
-    // left: 100%;
+    transform: translateY(-100px);
     height: 42px;
     background-color: rgb(80, 80, 80);
     border-radius: 0 0 5px 5px;
-    // animation: slide 0.5s forwards;
     &__appear {
         animation: slide 0.5s forwards;
     }
     &__disappear {
-        animation: slide-off 0.5 forwards;
+        animation: slide-off 0.5s forwards;
     }
     &.light-mode {
         background-color: rgb(212, 212, 212);

@@ -8,28 +8,34 @@
                 <li class="btn cursor-pointer" (click)="goTo('about')">A propos</li>
                 <li class="btn cursor-pointer" (click)="goTo('contact')">Contact</li>
                 <li class="icons cursor-pointer" (click)="openMenu()" (clickOutside)="closeMenu()"
-                    [exclude]="'.dark__mode__menu,.dark__mode__menu__button--icon'" [excludeBeforeClick]=true><i class="fa-solid fa-moon"></i></li>
+                    [exclude]="'.dark__mode__menu,.dark__mode__menu__button--icon'" [excludeBeforeClick]=true><i
+                        class="fa-solid fa-moon"></i></li>
             </ul>
         </nav>
     </div>
 </header>
-<div class="dark__mode__menu d-flex flex-align-center cursor-pointer" [ngClass]="{'light-mode': dark,
-                'dark__mode__menu__disappear': animationOff,
+<div class="dark__mode__menu d-flex flex-align-center cursor-pointer dark__mode__menu__disappear" [ngClass]="{'light-mode': dark,
+                'dark__mode__menu__disappear': !animation && dirtyMenu,
                 'dark__mode__menu__appear': animation}" (click)="test()">
     <button class="dark__mode__menu__button cursor-pointer" [ngClass]="{'light-mode': dark}">Mode sombre: </button>
-    <div class="dark__mode__menu__button--icon"><i
-        class="fa-solid fa-check" [style.display]="dark ? 'block' : 'none'"></i><i class="fa-solid fa-xmark" [style.display]="dark ? 'none' : 'block'"></i>
+    <div class="dark__mode__menu__button--icon"><i class="fa-solid fa-check"
+            [style.display]="dark ? 'block' : 'none'"></i><i class="fa-solid fa-xmark"
+            [style.display]="dark ? 'none' : 'block'"></i>
     </div>
 </div>
 <section id="main">
     <div class="d-flex flex-align-center justify-space-around fill">
         <div class="about">
-            <h2 class="incroyable">Raphael Alves, Développeur Web Junior</h2>
             <div class="portrait">
                 <img class="portrait__image" src="../../assets/test.jpg" alt="photo de Raphael Alves">
             </div>
             <div class="about__tech">
-                lalala
+                <div *ngFor="let tech of techs; let i = index">
+                    <div>
+                        <h3>{{tech.name}}</h3>
+                        <p>{{tech.image}}</p>
+                    </div>
+                </div>
             </div>
         </div>
         <article class="education">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nisl sapien,

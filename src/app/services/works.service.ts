@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Work } from '../models/work.models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WorksService {
-  projects: any = [
+  projects: Array<Work> = [
     {
       name: 'test',
       description: 'blablablabla',
