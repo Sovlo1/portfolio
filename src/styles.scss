@@ -128,7 +128,7 @@ section {
 
 @keyframes slide {
     0% {
-        transform: translateY(-100px);
+        transform: translateY(-50px);
     }
     100% {
         transform: translateY(0px);
@@ -140,7 +140,7 @@ section {
         transform: translateY(0px);
     }
     100% {
-        transform: translateY(-100px);
+        transform: translateY(-50px);
     }
 }
 
