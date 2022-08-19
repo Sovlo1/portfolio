@@ -7,27 +7,38 @@ import { Work } from '../models/work.models';
 export class WorksService {
   projects: Array<Work> = [
     {
+      name: 'OhMyFood',
+      description: 'OhMyFood',
+      image: '../../assets/projects/ohmyfood.png',
+    },
+    {
       name: 'test',
       description: 'blablablabla',
-      bigDescription: 'blabla blabla blabla blabla',
+
+      image: '../../assets/image rire berk.jpg',
+    },
+    {
+      name: 'test',
+      description: 'blablablabla',
+
       image: '../../assets/un truc drole quand même.jpg',
     },
     {
       name: 'test',
       description: 'blablablabla',
-      bigDescription: 'blablablablablablablabla',
+
       image: '../../assets/un truc drole quand même.jpg',
     },
     {
       name: 'test',
       description: 'blablablabla',
-      bigDescription: 'blablablablablablablabla',
+
       image: '../../assets/un truc drole quand même.jpg',
     },
     {
       name: 'test',
       description: 'blablablabla',
-      bigDescription: 'blablablablablablablabla',
+
       image: '../../assets/un truc drole quand même.jpg',
     },
   ];

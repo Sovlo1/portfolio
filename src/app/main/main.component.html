@@ -27,7 +27,8 @@
     <div class="d-flex flex-align-center justify-center flex-column fill">
         <article class="about d-flex">
             <div class="portrait">
-                <img class="portrait__image" src="../../assets/test.jpg" alt="photo de Raphael Alves">
+                <img class="portrait__image" src="../../assets/technos/logo-javascript.svg"
+                    alt="photo de Raphael Alves">
             </div>
             <div class="education">
                 <p>
@@ -54,31 +55,24 @@
                 </p>
             </div>
         </article>
-        <div class="about__tech">
-            <div *ngFor="let tech of techs; let i = index">
-                <div>
-                    <h3>{{tech.name}}</h3>
-                    <p>{{tech.image}}</p>
-                </div>
+        <div class="d-flex about__tech">
+            <div class="d-flex flex-column flex-align-center justify-space-between about__tech__container"
+                *ngFor="let tech of techs; let i = index">
+                <img class="about__tech__container--img" src="{{tech.image}}" alt="{{tech.name}}">
             </div>
         </div>
     </div>
 </section>
 <section id="projects">
     <div class="d-flex flex-align-center fill">
-        <div class="d-flex flex-column flex-align-center">
+        <div class="d-flex flex-column flex-align-center w-fill">
             <h2>Projets passés et en cours:</h2>
             <div class="container d-flex flex-wrap">
-                <div *ngFor="let work of works;let i = index" class="container__projects">
-                    <div class=" d-flex flex-column" (mouseover)="isHovered(i)" (mouseleave)="isNotHovered()">
-                        <div *ngIf="(hovered && i === this.index)" class="container__projects__box">
-                            <p class="container__projects__box__description fill w-fill">{{ work.bigDescription}} </p>
-                        </div>
-                        <img class="container__projects__image" src="{{ work.image }}" alt="">
-                        <div class="container__projects__about">
-                            <h3>{{ work.name }} </h3>
-                            <p>{{work.description}}</p>
-                        </div>
+                <div *ngFor="let work of works;let i = index" class="container__projects d-flex flex-column">
+                    <img class="container__projects__image" src="{{ work.image }}" alt="">
+                    <div class="container__projects__box">
+                        <h3>{{ work.name }} </h3>
+                        <p class="container__projects__box__description fill w-fill">{{ work.description}} </p>
                     </div>
                 </div>
             </div>

@@ -31,7 +31,6 @@ button {
 }
 
 img {
-    object-fit: cover;
     width: 100%;
 }
 
@@ -111,7 +110,6 @@ ul {
 section {
     height: 100vh;
     min-height: 900px;
-    flex: 1;
 }
 
 .btn {
@@ -128,19 +126,37 @@ section {
 
 @keyframes slide {
     0% {
-        transform: translateY(-50px);
+        transform: translateY(-100%);
     }
     100% {
-        transform: translateY(0px);
+        transform: translateY(0%);
     }
 }
 
 @keyframes slide-off {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0%);
     }
     100% {
-        transform: translateY(-50px);
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slide-project {
+    0% {
+        transform: translateY(+100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide-off-project {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(+100%);
     }
 }
 
