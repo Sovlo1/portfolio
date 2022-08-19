@@ -12,16 +12,15 @@ export class WorksService {
       image: '../../assets/projects/ohmyfood.png',
     },
     {
-      name: 'test',
+      name: 'Booki',
       description: 'blablablabla',
 
-      image: '../../assets/image rire berk.jpg',
+      image: '../../assets/projects/booki.png',
     },
     {
-      name: 'test',
+      name: 'La Chouette agence',
       description: 'blablablabla',
-
-      image: '../../assets/un truc drole quand même.jpg',
+      image: '../../assets/projects/lachouetteagence.png',
     },
     {
       name: 'test',
