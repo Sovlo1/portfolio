@@ -2,7 +2,6 @@
     width: 90%;
     &__tech {
         width: max-content;
-        border: solid 1px black;
         border-radius: 5px;
         padding: 5px;
         &__container {
@@ -19,7 +18,6 @@
 
 .portrait {
     object-fit: cover;
-    margin: 0 10px 0 0;
     &__image {
         width: 300px;
         height: 300px;
@@ -28,10 +26,22 @@
 }
 
 .education {
-    width: 100%;
+    width: 50%;
     max-height: 100%;
     border-radius: 5px;
     padding: 5px;
+    &--box {
+        border-radius: 15px;
+        background-color: rgba(70, 70, 70, 0.89);
+        padding: 5px;
+        width: 100%;
+    }
+    &--separator {
+        background-color: rgba(70, 70, 70, 0.89);
+        height: 50px;
+        width: 5px;
+        margin: auto;
+    }
 }
 
 li {
@@ -43,16 +53,17 @@ i {
 }
 
 .container {
-    border: 1px solid black;
     width: 90%;
     &__projects {
         position: relative;
         overflow: hidden;
         margin: 10px;
-        height: 250px;
-        width: 200px;
+        height: 400px;
+        width: 350px;
+        border-radius: 15px 15px;
+        box-shadow: 0px 1px 4px 1px rgba(70, 70, 70, 0.67);
         &:hover > .container__projects__box {
-            margin: 0 0 0 0;
+            margin: -50px 0 0 0;
         }
         &:hover > .container__projects__image {
             filter: blur(5px);
@@ -66,24 +77,26 @@ i {
         }
         &__box {
             position: absolute;
-            overflow: hidden;
             word-break: break-word;
             color: black;
-            margin: +196px 0;
+            margin: +368px 0;
             transition: margin 0.8s;
             top: 0;
             left: 0;
-            height: 100%;
+            height: 130%;
             width: 100%;
-            font-size: 18px;
+            background-color: rgb(255, 255, 255, 0.89);
             h3 {
                 font-size: 24px;
                 margin: 0 0 24px 0;
             }
             &__description {
+                position: absolute;
+                top: 0;
+                left: 0;
                 font-size: 20px;
-                box-shadow: 0px 0px 0px 0px rgb(255, 255, 255);
-                background-color: rgb(255, 255, 255);
+                padding: 5px;
+                margin: -3px -6px 0 -4px;
             }
         }
     }

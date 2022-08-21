@@ -25,34 +25,29 @@
 </div>
 <section id="main">
     <div class="d-flex flex-align-center justify-center flex-column fill">
-        <article class="about d-flex">
+        <article class="about d-flex flex-column flex-align-center">
             <div class="portrait">
                 <img class="portrait__image" src="../../assets/technos/logo-javascript.svg"
                     alt="photo de Raphael Alves">
             </div>
             <div class="education">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nisl sapien,
-                    condimentum sit amet orci nec, tempus luctus nibh. Fusce pellentesque malesuada enim, sed tempor
-                    turpis
-                    dapibus placerat. Maecenas non mi purus. Fusce eget facilisis sapien. Vestibulum ante ipsum primis
-                    in
-                    faucibus orci luctus et ultrices posuere cubilia curae; Etiam efficitur euismod tristique. Integer
-                    lobortis
-                    libero vitae sem porta pulvinar. Fusce id commodo sapien, sed tempus urna. In hac habitasse platea
-                    dictumst.
-                    Morbi gravida massa sit amet nisl congue hendrerit.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nisl sapien,
-                    condimentum sit amet orci nec, tempus luctus nibh. Fusce pellentesque malesuada enim, sed tempor
-                    turpis
-                    dapibus placerat. Maecenas non mi purus. Fusce eget facilisis sapien. Vestibulum ante ipsum primis
-                    in
-                    faucibus orci luctus et ultrices posuere cubilia curae; Etiam efficitur euismod tristique. Integer
-                    lobortis
-                    libero vitae sem porta pulvinar. Fusce id commodo sapien, sed tempus urna. In hac habitasse platea
-                    dictumst.
-                    Morbi gravida massa sit amet nisl congue hendrerit.
-                </p>
+                <div class="education--box d-flex flex-column flex-align-center">
+                    <h3>Brevet des collèges</h3>
+                    <p>2007 - Collège Amiral de Rigny</p>
+                    <p>Toul, 54200</p>
+                </div>
+                <div class="education--separator"></div>
+                <div class="education--box d-flex flex-column flex-align-center">
+                    <h3>BEP Electronique</h3>
+                    <p>2009 - Lycée Jean Prouvé</p>
+                    <p>Nancy, 54000</p>
+                </div>
+                <div class="education--separator"></div>
+                <div class="education--box d-flex flex-column flex-align-center">
+                    <h3>Diplôme RNCP de niveau 5 en développment web</h3>
+                    <p>2022 - OpenClassrooms</p>
+                    <p>Formation à distance</p>
+                </div>
             </div>
         </article>
         <div class="d-flex about__tech">
@@ -68,12 +63,15 @@
         <div class="d-flex flex-column flex-align-center w-fill">
             <h2>Projets passés et en cours:</h2>
             <div class="container">
-                <div class="d-flex flex-wrap">
-                    <div *ngFor="let work of works;let i = index" class="container__projects d-flex flex-column">
+                <div class="d-flex flex-wrap justify-center">
+                    <div *ngFor="let work of works;let i = index"
+                        class="container__projects cursor-pointer d-flex flex-column">
                         <img class="container__projects__image" src="{{ work.image }}" alt="">
                         <div class="container__projects__box">
-                            <h3>{{ work.name }} </h3>
-                            <p class="container__projects__box__description fill w-fill">{{ work.description}} </p>
+                            <div class="container__projects__box__description fill w-fill">
+                                <h3>{{ work.name }} </h3>
+                                <p>{{ work.description}} </p>
+                            </div>
                         </div>
                     </div>
                 </div>

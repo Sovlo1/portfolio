@@ -12,8 +12,6 @@ body.light-mode {
 * {
     margin: 0px;
     font-family: "Ubuntu", sans-serif;
-    // color: rgb(226, 226, 226);
-    // font-family: 'Roboto Mono', monospace;
 }
 
 body {
@@ -109,7 +107,6 @@ ul {
 
 section {
     height: 100vh;
-    min-height: 900px;
 }
 
 .btn {
@@ -139,24 +136,6 @@ section {
     }
     100% {
         transform: translateY(-100%);
-    }
-}
-
-@keyframes slide-project {
-    0% {
-        transform: translateY(+100%);
-    }
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-@keyframes slide-off-project {
-    0% {
-        transform: translateY(0%);
-    }
-    100% {
-        transform: translateY(+100%);
     }
 }
 
