@@ -8,7 +8,7 @@
             <div *ngFor="let diploma of diplomas; last as isLast" class="education">
                 <div class="education--box d-flex flex-column flex-align-center">
                     <h3>{{diploma.name}}</h3>
-                    <p>{{diploma.year}}{{diploma.school}}</p>
+                    <p>{{diploma.year}} - {{diploma.school}}</p>
                     <p>{{diploma.location}}</p>
                 </div>
                 <div *ngIf="!isLast" class="education--separator"></div>
