@@ -37,10 +37,6 @@ export class MainComponent implements OnInit {
     this.techs = this.technologies.technologies;
     this.viewPortScroller.setOffset([0, 50]);
     console.log(this.viewPortScroller.getScrollPosition());
-    this.dark = this.darkMode.checkDarkMode();
-    if (this.dark === true) {
-      document.body.classList.toggle('light-mode');
-    }
   }
 
   isHovered(i: number): void {

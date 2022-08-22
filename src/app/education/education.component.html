@@ -1,0 +1,24 @@
+<section id="main">
+    <div class="d-flex flex-align-center justify-center flex-column">
+        <article class="about d-flex flex-column flex-align-center">
+            <div class="portrait">
+                <img class="portrait__image" src="../../assets/technos/logo-javascript.svg"
+                    alt="photo de Raphael Alves">
+            </div>
+            <div *ngFor="let diploma of diplomas; last as isLast" class="education">
+                <div class="education--box d-flex flex-column flex-align-center">
+                    <h3>{{diploma.name}}</h3>
+                    <p>{{diploma.year}}{{diploma.school}}</p>
+                    <p>{{diploma.location}}</p>
+                </div>
+                <div *ngIf="!isLast" class="education--separator"></div>
+            </div>
+        </article>
+        <div class="d-flex about__tech">
+            <div class="d-flex flex-column flex-align-center justify-space-between about__tech__container"
+                *ngFor="let tech of techs; let i = index">
+                <img class="about__tech__container--img" src="{{tech.image}}" alt="{{tech.name}}">
+            </div>
+        </div>
+    </div>
+</section>

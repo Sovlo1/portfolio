@@ -1,0 +1,36 @@
+.dark__mode__menu {
+    width: max-content;
+    position: sticky;
+    z-index: 4;
+    top: 50px;
+    left: 100%;
+    transform: translateY(-100px);
+    height: 42px;
+    background-color: rgb(80, 80, 80);
+    border-radius: 0 0 5px 5px;
+    &__appear {
+        animation: slide 0.5s forwards;
+    }
+    &__disappear {
+        animation: slide-off 0.5s forwards;
+    }
+    &.light-mode {
+        background-color: rgb(212, 212, 212);
+    }
+    &__button {
+        background-color: rgb(80, 80, 80);
+        border: none;
+        margin: 0;
+        &.light-mode {
+            background-color: rgb(212, 212, 212);
+        }
+    }
+    i {
+        font-size: 24px;
+        margin: 0 5px;
+    }
+}
+
+li {
+    margin: 0px 10px 0px 10px;
+}
