@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DarkModeService } from '../services/dark-mode.service';
 
 @Component({
@@ -12,10 +13,7 @@ export class HeaderComponent implements OnInit {
   public dirtyMenu: boolean = false;
   public dark!: boolean;
   public animation: boolean = false;
-  constructor(
-    private darkMode: DarkModeService,
-    private viewPortScroller: ViewportScroller
-  ) {}
+  constructor(private darkMode: DarkModeService, private router: Router) {}
 
   ngOnInit(): void {
     this.dark = this.darkMode.checkDarkMode();
@@ -24,14 +22,13 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  test(): void {
+  DarkOrLightMode(): void {
     this.dark = this.darkMode.changeMode();
     document.body.classList.toggle('light-mode');
   }
 
-  goTo(element: string) {
-    this.viewPortScroller.scrollToAnchor(element);
-    console.log(this.viewPortScroller.getScrollPosition());
+  goTo(element: string): void {
+    this.router.navigate(['./' + element]);
   }
 
   openMenu(): void {

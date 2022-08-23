@@ -34,3 +34,12 @@
 li {
     margin: 0px 10px 0px 10px;
 }
+
+.optionMenu {
+    &__rotate--in {
+        animation: rotateIn 0.5s forwards;
+    }
+    &__rotate--out {
+        animation: rotateOut 0.5s forwards;
+    }
+}

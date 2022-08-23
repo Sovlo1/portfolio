@@ -1,1 +1,21 @@
-<p>portfolio works!</p>
+<section id="projects">
+    <div class="d-flex flex-align-center fill">
+        <div class="d-flex flex-column flex-align-center w-fill">
+            <h2>Projets passés et en cours:</h2>
+            <div class="container">
+                <div class="d-flex flex-wrap justify-center">
+                    <div *ngFor="let work of works;let i = index"
+                        class="container__projects cursor-pointer d-flex flex-column">
+                        <img class="container__projects__image" src="{{ work.image }}" alt="">
+                        <div class="container__projects__box">
+                            <div class="container__projects__box__description fill w-fill">
+                                <h3>{{ work.name }} </h3>
+                                <p>{{ work.description}} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
