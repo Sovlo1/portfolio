@@ -1,0 +1,26 @@
+.about {
+    width: 90%;
+    &__tech {
+        width: max-content;
+        border-radius: 5px;
+        padding: 5px;
+        &__container {
+            position: relative;
+            margin: 10px;
+            width: 90px;
+            &--img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.portrait {
+    object-fit: cover;
+    &__image {
+        width: 300px;
+        height: 300px;
+        border-radius: 30px;
+    }
+}

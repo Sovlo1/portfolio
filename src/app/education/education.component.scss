@@ -27,14 +27,13 @@
 }
 
 .education {
-    width: 50%;
+    width: 100%;
     max-height: 100%;
     border-radius: 5px;
     &--box {
         border-radius: 15px;
         background-color: rgba(70, 70, 70, 0.89);
         padding: 5px;
-        width: 100%;
     }
     &--separator {
         background-color: rgba(70, 70, 70, 0.89);
