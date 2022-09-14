@@ -1,5 +1,5 @@
 .container {
-    // width: 90%;
+    margin: 20px;
     &__projects {
         position: relative;
         overflow: hidden;
@@ -45,5 +45,18 @@
                 margin: -3px -6px 0 -4px;
             }
         }
+    }
+}
+
+.project__about {
+    width: 500px;
+    height: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 15px 15px;
+    background-color: rgba(70, 70, 70, 0.89);
+    &--works {
+        width: 90px;
+        margin: 0 10px 0 0;
     }
 }

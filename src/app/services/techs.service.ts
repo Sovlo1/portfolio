@@ -14,7 +14,10 @@ export class TechsService {
       name: 'CSS3',
       image: '../../assets/technos/css-3.svg',
     },
-
+    {
+      name: 'Sass',
+      image: '../../assets/technos/sass-1.svg',
+    },
     {
       name: 'JavaScript',
       image: '../../assets/technos/logo-javascript.svg',
@@ -30,6 +33,14 @@ export class TechsService {
     {
       name: 'NodeJS',
       image: '../../assets/technos/nodejs-1.svg',
+    },
+    {
+      name: 'MongoDB',
+      image: '../../assets/technos/mongodb-icon-1.svg',
+    },
+    {
+      name: 'MySQL',
+      image: '../../assets/technos/mysql-6.svg',
     },
   ];
   constructor() {}
