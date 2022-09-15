@@ -1,6 +1,7 @@
 body {
     --background-color: rgb(19, 19, 19);
     --color: rgb(226, 226, 226);
+    --link-color: rgb(151, 170, 255);
 }
 
 body.light-mode {
@@ -22,13 +23,19 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
 button {
     background-color: var(--background-color);
     color: var(--color);
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .fill {
@@ -166,6 +173,17 @@ i {
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
     }
 }
 

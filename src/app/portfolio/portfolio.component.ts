@@ -10,6 +10,8 @@ import { WorksService } from '../services/works.service';
 export class PortfolioComponent implements OnInit {
   public works!: Array<Work>;
   public workIndex: number = 0;
+  public playAnimation: boolean = false;
+  public workRange: number = 2;
 
   constructor(private projects: WorksService) {}
 
@@ -18,10 +20,22 @@ export class PortfolioComponent implements OnInit {
     console.log(this.works);
   }
 
+  changeRange(change: string): void {
+    console.log(this.workRange);
+    if (change === 'up' && this.workRange < this.works.length) {
+      this.workRange += 2;
+    } else if (change === 'down' && this.workRange > 3) {
+      this.workRange -= 2;
+    } else {
+      return;
+    }
+  }
+
   selectProject(i: number): void {
     if (i === this.workIndex) {
       return;
-    } else this.workIndex = i;
-    console.log(i);
+    } else {
+      this.workIndex = i;
+    }
   }
 }

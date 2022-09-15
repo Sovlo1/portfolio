@@ -1,21 +1,37 @@
 <section class="d-flex flex-align-center justify-center">
     <div class="container d-flex flex-column flex-align-center w-fill">
         <h2>Projets passés et en cours:</h2>
-        <div class="d-flex">
-            <div class="d-flex flex-column">
-                <div *ngFor="let work of works;let i = index" class="container__projects cursor-pointer"
-                    (click)="selectProject(i)">
-                    <img class="container__projects__image" src="{{ work.image }}" alt="">
-                </div>
+        <div class="d-flex flex-align-center">
+            <div class="d-flex flex-column flex-align-center">
+                <span class="range__btn d-flex flex-align-center justify-center cursor-pointer"
+                    (click)="changeRange('down')"><i class="fa-solid fa-chevron-up"></i></span>
+                <ng-container *ngFor="let work of works;let i = index">
+                    <div *ngIf="i < this.workRange && i > this.workRange -3"
+                        class="container__projects cursor-pointer d-flex flex-align-center justify-center"
+                        (click)="selectProject(i)">
+                        <img class="container__projects__image" src="{{ work.image }}" alt="">
+                    </div>
+                </ng-container>
+                <span class="range__btn d-flex flex-align-center justify-center cursor-pointer"
+                    (click)="changeRange('up')"><i class=" fa-solid fa-chevron-down"></i></span>
             </div>
-            <div class="project__about">
-                <h3>{{works[this.workIndex].name}}</h3>
-                <p>{{works[this.workIndex].description}}</p>
-                <div *ngIf="works[this.workIndex].link"><a href="{{works[this.workIndex].link}}">Voir
-                        {{works[this.workIndex].name}}</a></div>
-                <h4 *ngIf="works[this.workIndex].github">Github:</h4>
-                <div *ngFor="let githublinks of works[this.workIndex].github">
-                    <a href="{{githublinks}}">{{works[this.workIndex].name}}'s repo</a>
+            <div class=" project__about" [ngClass]="{'project__about--slide-in': this.playAnimation}">
+                <div class="project__about--blocks">
+                    <h3>Nom du projet:</h3>
+                    <h4>{{works[this.workIndex].name}}</h4>
+                </div>
+                <div class="project__about--blocks">
+                    <h4>A propos du projet:</h4>
+                    <p>{{works[this.workIndex].description}}</p>
+                </div>
+                <div *ngIf="works[this.workIndex].link" class="link project__about--blocks"><a
+                        href="{{works[this.workIndex].link}}">Voir
+                        le site</a></div>
+                <div class="project__about--blocks">
+                    <h4 *ngIf="works[this.workIndex].github">Github link(s):</h4>
+                    <div *ngFor="let githublinks of works[this.workIndex].github; let number = index" class="link">
+                        <a href="{{githublinks}}">{{works[this.workIndex].name}}'s repo</a>
+                    </div>
                 </div>
                 <div class="d-flex flex-align-center">
                     <div *ngFor="let tech of works[this.workIndex].stack" class="project__about--works">
