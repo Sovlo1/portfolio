@@ -74,7 +74,7 @@ export class WorksService {
     {
       name: 'dotaBot',
       description:
-        "Petit projet de bot fait pour un groupe d'amis destiné à Discord. Le projet a été fait sous node.js avec l'aide de discord.js pour la structure et de mongoDB pour une petite base de données",
+        "Petit projet de bot destiné à Discord. Le projet a été fait sous node.js avec l'aide de discord.js pour la structure et de mongoDB pour une petite base de données",
       image: '../../assets/projects/robot-emoji.svg',
       stack: [this.tech[6]],
       github: ['https://github.com/Sovlo1/discordbot'],

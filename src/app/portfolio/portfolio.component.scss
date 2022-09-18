@@ -12,8 +12,8 @@
             transform: scale(1.3);
         }
         &__image {
-            // width: 100%;
-            // height: 100%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             position: relative;
             transition: transform 0.4s;

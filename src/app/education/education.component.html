@@ -14,7 +14,7 @@
                 <div *ngIf="!isLast" class="education--separator"></div>
             </div>
         </article>
-        <div class="d-flex about__tech">
+        <div class="d-flex flex-wrap about__tech">
             <div class="d-flex flex-column flex-align-center justify-space-between about__tech__container"
                 *ngFor="let tech of techs; let i = index">
                 <img class="about__tech__container--img" src="{{tech.image}}" alt="{{tech.name}}">
