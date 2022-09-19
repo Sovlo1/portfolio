@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgClickOutsideDirective } from 'ng-click-outside2';
 import { ROUTES } from './app.routes';
 
@@ -26,6 +27,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgClickOutsideDirective,
     RouterModule.forRoot(ROUTES),
   ],
