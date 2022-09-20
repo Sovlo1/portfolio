@@ -3,26 +3,15 @@
         <h1>Raphael Alves, Developpeur Web Junior</h1>
         <nav>
             <ul class="d-flex flex-align-center">
-                <li class="btn cursor-pointer" (click)="goTo('education')">Parcours</li>
-                <li class="btn cursor-pointer" (click)="goTo('projects')">Portfolio</li>
-                <li class="btn cursor-pointer" (click)="goTo('about')">A propos</li>
-                <li class="btn cursor-pointer" (click)="goTo('contact')">Contact</li>
-                <li class="optionMenu icons cursor-pointer" [ngClass]="{'optionMenu__rotate--out': !animation && dirtyMenu,
-                'optionMenu__rotate--in': animation}" (click)="openMenu()" (clickOutside)="closeMenu()"
-                    [exclude]="'.dark__mode__menu,.dark__mode__menu__button--icon'" [excludeBeforeClick]=true><i
-                        class=" fa-solid fa-gear"></i></li>
+                <li class="nav--btn cursor-pointer" (click)="goTo('about')">A propos</li>
+                <li class="divider"></li>
+                <li class="nav--btn cursor-pointer" (click)="goTo('education')">Parcours</li>
+                <li class="divider"></li>
+                <li class="nav--btn cursor-pointer" (click)="goTo('projects')">Portfolio</li>
+                <li class="divider"></li>
+                <li class="nav--btn cursor-pointer" (click)="goTo('contact')">Contact</li>
+                <li class="nav--icon cursor-pointer"><i class="fa-solid fa-bars"></i></li>
             </ul>
         </nav>
     </div>
-
 </header>
-<div class="dark__mode__menu d-flex flex-align-center cursor-pointer dark__mode__menu__disappear" [ngClass]="{'light-mode': dark,
-'dark__mode__menu__disappear': !animation && dirtyMenu,
-'dark__mode__menu__appear': animation}" (click)="DarkOrLightMode()">
-    <button class="dark__mode__menu__button cursor-pointer" [ngClass]="{'light-mode': dark}">Mode sombre:
-    </button>
-    <div class="dark__mode__menu__button--icon"><i class="fa-solid fa-check"
-            [style.display]="dark ? 'block' : 'none'"></i><i class="fa-solid fa-xmark"
-            [style.display]="dark ? 'none' : 'block'"></i>
-    </div>
-</div>

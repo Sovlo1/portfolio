@@ -1,5 +1,6 @@
 .container {
-    margin: 20px;
+    width: 100%;
+    margin: 20px 10vw 20px 10vw;
     &__projects {
         position: relative;
         overflow: hidden;
@@ -22,10 +23,10 @@
 }
 
 .project__about {
-    width: 500px;
+    max-width: 800px;
     height: 100%;
     padding: 10px;
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
     border-radius: 15px 15px;
     background-color: rgba(70, 70, 70, 0.89);
     &--works {
@@ -40,15 +41,18 @@
     }
 }
 
-.range__btn {
-    background-color: rgba(70, 70, 70, 0.89);
-    padding: 10px 15px;
-    border-radius: 15px;
-    &:first-of-type {
-        margin: 10px 0 0 0;
-    }
-    &:hover {
-        background-color: rgba(122, 122, 122, 0.89);
-        transition: 0.3s;
+.range {
+    // margin-left: 10vw;
+    &__btn {
+        background-color: rgba(70, 70, 70, 0.89);
+        padding: 10px 15px;
+        border-radius: 15px;
+        &:first-of-type {
+            margin: 10px 0 0 0;
+        }
+        &:hover {
+            background-color: rgba(122, 122, 122, 0.89);
+            transition: 0.3s;
+        }
     }
 }
