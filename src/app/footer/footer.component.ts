@@ -8,12 +8,7 @@ import { DarkModeService } from '../services/dark-mode.service';
 })
 export class FooterComponent implements OnInit {
   public dark!: boolean;
-  constructor(private darkMode: DarkModeService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.dark = this.darkMode.checkDarkMode();
-    if (this.dark === true) {
-      document.body.classList.toggle('light-mode');
-    }
-  }
+  ngOnInit(): void {}
 }

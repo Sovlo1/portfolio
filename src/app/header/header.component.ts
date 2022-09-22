@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
     this.currentWindowWidth = window.innerWidth;
   }
 
-  constructor(private darkMode: DarkModeService, private router: Router) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.currentWindowWidth = window.innerWidth;
