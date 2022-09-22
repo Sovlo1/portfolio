@@ -1,7 +1,7 @@
 <header [ngClass]="{'light-mode': dark}">
     <div [ngClass]="{'justify-cntr':this.currentWindowWidth < 1100}"
         class="top__bar d-flex justify-space-between flex-align-center fill">
-        <h1 *ngIf="this.currentWindowWidth > 1100">Raphael Alves, Developpeur Web Junior</h1>
+        <h1 *ngIf="this.currentWindowWidth >= 1100">Raphael Alves, Developpeur Web Junior</h1>
         <nav>
             <ul class="d-flex flex-align-center">
                 <div class="btn__container ">
@@ -17,7 +17,7 @@
                         <li class="nav--btn cursor-pointer" (click)="goTo('contact')">Contact</li>
                     </div>
                 </div>
-                <li *ngIf="this.currentWindowWidth > 1100" class="nav--icon cursor-pointer" (click)="showButtons()"><i
+                <li *ngIf="this.currentWindowWidth >= 1100" class="nav--icon cursor-pointer" (click)="showButtons()"><i
                         class="fa-solid fa-bars"></i></li>
             </ul>
         </nav>

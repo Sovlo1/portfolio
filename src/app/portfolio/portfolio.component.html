@@ -1,11 +1,11 @@
 <section class="d-flex flex-align-center justify-center">
     <div class="container d-flex flex-column flex-align-center w-fill">
         <h2>Projets passés et en cours:</h2>
-        <div class="d-flex flex-align-center w-fill">
-            <div class="range d-flex flex-column flex-align-center">
+        <div class="d-flex flex-column-reverse flex-align-center w-fill">
+            <div class="range d-flex flex-align-center">
                 <button [ngClass]="{'cursor-disabled': this.workRange <= 2}"
                     class="range__btn d-flex flex-align-center justify-center cursor-pointer"
-                    (click)="changeRange('down')"><i class="fa-solid fa-chevron-up"></i></button>
+                    (click)="changeRange('down')"><i class="fa-solid fa-chevron-left"></i></button>
                 <ng-container *ngFor="let work of works;let i = index">
                     <div *ngIf="i < this.workRange && i > this.workRange -3"
                         class="container__projects cursor-pointer d-flex flex-align-center justify-center"
@@ -15,7 +15,7 @@
                 </ng-container>
                 <button [ngClass]="{'cursor-disabled': this.workRange >= this.works.length}"
                     class="range__btn d-flex flex-align-center justify-center cursor-pointer"
-                    (click)="changeRange('up')"><i class=" fa-solid fa-chevron-down"></i></button>
+                    (click)="changeRange('up')"><i class=" fa-solid fa-chevron-right"></i></button>
             </div>
             <div class=" project__about" [ngClass]="{'project__about--slide-in': this.playAnimation}">
                 <div class="project__about--blocks">
@@ -35,7 +35,7 @@
                         <a href="{{githublinks}}">{{works[this.workIndex].name}}'s repo</a>
                     </div>
                 </div>
-                <div class="d-flex flex-align-center">
+                <div class="d-flex flex-align-center flex-wrap">
                     <div *ngFor="let tech of works[this.workIndex].stack" class="project__about--works">
                         <img class="truc" src="{{tech.image}}" alt="">
                     </div>

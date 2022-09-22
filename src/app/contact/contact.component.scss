@@ -1,0 +1,9 @@
+ul {
+    padding-inline-start: 0px;
+}
+
+.contact {
+    @media screen and (max-width: 500px) {
+        text-align: center;
+    }
+}
