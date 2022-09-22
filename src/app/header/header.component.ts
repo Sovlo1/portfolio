@@ -1,5 +1,4 @@
-import { ViewportScroller } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DarkModeService } from '../services/dark-mode.service';
 
@@ -13,34 +12,25 @@ export class HeaderComponent implements OnInit {
   public dirtyMenu: boolean = false;
   public dark!: boolean;
   public animation: boolean = false;
+  public currentWindowWidth!: number;
+  public displayButtons: boolean = false;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.currentWindowWidth = window.innerWidth;
+  }
+
   constructor(private darkMode: DarkModeService, private router: Router) {}
 
   ngOnInit(): void {
-    this.dark = this.darkMode.checkDarkMode();
-    if (this.dark === true) {
-      document.body.classList.toggle('light-mode');
-    }
-  }
-
-  DarkOrLightMode(): void {
-    this.dark = this.darkMode.changeMode();
-    document.body.classList.toggle('light-mode');
+    this.currentWindowWidth = window.innerWidth;
   }
 
   goTo(element: string): void {
     this.router.navigate(['./' + element]);
   }
 
-  openMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
-    this.animation = !this.animation;
-    this.dirtyMenu = true;
-  }
-
-  closeMenu(): void {
-    if (this.isMenuOpen === true) {
-      this.animation = !this.animation;
-      this.isMenuOpen = false;
-    }
+  showButtons() {
+    this.displayButtons = !this.displayButtons;
   }
 }
