@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Diploma } from '../models/diploma.models';
 import { Tech } from '../models/tech.models';
 import { Work } from '../models/work.models';
@@ -15,6 +15,13 @@ export class MainComponent implements OnInit {
   public works!: Array<Work>;
   public diplomas!: Array<Diploma>;
   public techs!: Array<Tech>;
+  public currentWindowWidth!: number;
+  public displayButtons: boolean = false;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.currentWindowWidth = window.innerWidth;
+  }
 
   constructor(
     private diplomas$: DiplomasService,
@@ -26,5 +33,10 @@ export class MainComponent implements OnInit {
     this.diplomas = this.diplomas$.diplomas;
     this.techs = this.technologies.technologies;
     this.works = this.projects.projects;
+    this.currentWindowWidth = window.innerWidth;
+  }
+
+  showButtons() {
+    this.displayButtons = !this.displayButtons;
   }
 }
