@@ -1,0 +1,97 @@
+<div class="wrapper">
+    <header>
+        <div class="top__bar d-flex justify-end flex-align-center fill">
+            <nav>
+                <ul class="d-flex flex-align-center">
+                    <div class="btn__container ">
+                        <div class="slideIn btn__container-slide d-flex flex-align-center">
+                            <li class="nav--btn cursor-pointer">A&nbsp;propos</li>
+                            <li class="divider"></li>
+                            <li class="nav--btn cursor-pointer">Parcours</li>
+                            <li class="divider"></li>
+                            <li class="nav--btn cursor-pointer">Portfolio</li>
+                            <li class="divider"></li>
+                            <li class="nav--btn cursor-pointer">Contact</li>
+                        </div>
+                    </div>
+                    <li class="nav--icon cursor-pointer"><i class="fa-solid fa-bars"></i></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="d-flex flex-align-center justify-center">
+        <div class="d-flex flex-align-center justify-space-around fill">
+            <article class="about d-flex flex-align-center">
+                <div class="portrait d-flex flex-align-center">
+                    <img class="portrait__image" src="../../assets/raphaelalves.png" alt="photo de Raphael Alves">
+                </div>
+                <div class="education">
+                    <h1>Hello, bienvenue ici!</h1>
+                    <p>
+                        Je m'appelle Raphaël Alves et je suis développeur web junior.
+                    </p>
+                    <p>J'ai vécu de petits boulots sans liens avec le développement jusqu'à mes presque 30 ans et j'ai
+                        décidé de
+                        prendre mon courage à deux mains et de reprendre des études dans un domaine pour lequel j'ai
+                        toujours été passioné.</p>
+                    <p>J'aime autant travailler sur un projet front ou backend mais ce que je préfère c'est travailler
+                        sur
+                        les deux en même temps et pouvoir voir coté front les résultats du backend.</p>
+                    <p>En dehors du travail j'aime énormément les jeux vidéo, la musique et les séries.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="d-flex flex-align-center flex-column justify-center">
+        <article class="scholarship d-flex flex-column flex-align-center">
+            <h2>Mon parcours</h2>
+            <div *ngFor="let diploma of diplomas; last as isLast" class="diplomas">
+                <div class="diplomas--box d-flex flex-column flex-align-center">
+                    <h3>{{diploma.name}}</h3>
+                    <p>{{diploma.year}} - {{diploma.school}}</p>
+                    <p>{{diploma.location}}</p>
+                </div>
+                <div *ngIf="!isLast" class="diplomas--separator"></div>
+            </div>
+        </article>
+        <div class="d-flex justify-center flex-wrap about__tech">
+            <div class="d-flex flex-column flex-align-center justify-space-between about__tech__container"
+                *ngFor="let tech of techs; let i = index">
+                <img class="about__tech__container--img" src="{{tech.image}}" alt="{{tech.name}}">
+            </div>
+        </div>
+    </section>
+    <section class="d-flex flex-align-center flex-column justify-center">
+        <h2>Quelques projets:</h2>
+        <div class="projects justify-center flex-wrap d-flex">
+            <div *ngFor=" let work of works;let i=index" class="projects__box d-flex flex-column">
+                <h3>{{work.name}}</h3>
+                <div class="projects__banner">
+                    <img src="{{work.image}}" alt="">
+                </div>
+                <p class="flexible">{{work.description}}</p>
+                <h4>Stack:</h4>
+                <div class="projects__image d-flex">
+                    <img *ngFor="let technos of work.stack" src="{{technos.image}}" alt="">
+                </div>
+                <div class="projects__links d-flex justify-space-around">
+                    <a *ngIf=" work.link" href="{{work.link}}"><button
+                            class="btn cursor-pointer">{{work.name}}</button></a>
+                    <div *ngFor="let githublinks of work.github; let number = index" class="link">
+                        <a href="{{githublinks}}"><button class="btn cursor-pointer">{{work.name}}'s Github</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+
+    </section>
+    <footer>
+        <div class="d-flex flex-align-center justify-center fill"><a
+                href="https://www.linkedin.com/in/raphael-alves-21b249174/"><i
+                    class="fa-brands fa-linkedin m-10"></i></a><a href="https://github.com/Sovlo1"><i
+                    class="fa-brands fa-github m-10"></i></a>
+        </div>
+    </footer>
+</div>
