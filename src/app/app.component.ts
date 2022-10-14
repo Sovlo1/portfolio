@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { ChildrenOutletContexts, OutletContext } from '@angular/router';
-import { slideInAnimation } from './animations/slide';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [slideInAnimation],
+  animations: [],
 })
 export class AppComponent {
   title = 'portfolio';

@@ -6,24 +6,11 @@ import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
 
-import { EducationComponent } from './education/education.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    EducationComponent,
-    PortfolioComponent,
-    AboutComponent,
-    ContactComponent,
-  ],
+  declarations: [AppComponent, MainComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

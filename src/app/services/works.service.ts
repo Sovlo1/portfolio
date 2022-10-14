@@ -59,15 +59,12 @@ export class WorksService {
         "Dernier projet de la formation, le but était de créer un réseau social pour l'entreprise Groupomania et d'utiliser un framework de notre choix. Le projet étant très libre j'ai fait le choix d'utiliser Angular qui semblait très puissant et agréable d'utilisation, le backend ici est encore une fois créé à l'aide de NodeJS mais la base de donnée quant à elle est cette fois ci en SQL.",
       image: '../../assets/projects/groupomanialogo.png',
       stack: [this.tech[5], this.tech[6], this.tech[8]],
-      github: [
-        'https://github.com/Sovlo1/groupomania_back',
-        'https://github.com/Sovlo1/groupomania_front',
-      ],
+      github: ['https://github.com/Sovlo1/groupomania'],
     },
     {
       name: 'Portfolio',
       description: "C'est le site ou vous vous trouvez actuellement!",
-      image: '../../assets/projects/cool-emoji.svg',
+      image: '../../assets/projects/portfoliologo.png',
       stack: [this.tech[5]],
       github: ['https://github.com/Sovlo1/portfolio'],
     },
@@ -75,7 +72,7 @@ export class WorksService {
       name: 'dotaBot',
       description:
         "Petit projet de bot destiné à Discord. Le projet a été fait sous node.js avec l'aide de discord.js pour la structure et de mongoDB pour une petite base de données",
-      image: '../../assets/projects/robot-emoji.svg',
+      image: '../../assets/projects/dotabotlogo.png',
       stack: [this.tech[6]],
       github: ['https://github.com/Sovlo1/discordbot'],
     },
