@@ -135,7 +135,9 @@
             transition: transform 0.3s;
         }
         & img {
-            object-fit: cover;
+            // object-fit: cover;
+            width: fit-content;
+            height: 100%;
         }
     }
     h4 {
@@ -155,6 +157,7 @@
 
 .btn {
     padding: 6px;
+    margin: 4px;
     border-radius: 5px;
     font-size: 18px;
     font-weight: 500;
@@ -174,6 +177,9 @@ li i {
     font-size: 25px;
 }
 
-.contact h2 {
-    margin: auto;
+.contact {
+    margin: 5vh 0 5vh 0;
+    & h2 {
+        margin: auto;
+    }
 }

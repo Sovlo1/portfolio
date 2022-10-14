@@ -64,7 +64,7 @@ export class WorksService {
     {
       name: 'Portfolio',
       description: "C'est le site ou vous vous trouvez actuellement!",
-      image: '../../assets/projects/cool-emoji.svg',
+      image: '../../assets/projects/portfoliologo.png',
       stack: [this.tech[5]],
       github: ['https://github.com/Sovlo1/portfolio'],
     },
@@ -72,7 +72,7 @@ export class WorksService {
       name: 'dotaBot',
       description:
         "Petit projet de bot destiné à Discord. Le projet a été fait sous node.js avec l'aide de discord.js pour la structure et de mongoDB pour une petite base de données",
-      image: '../../assets/projects/robot-emoji.svg',
+      image: '../../assets/projects/dotabotlogo.png',
       stack: [this.tech[6]],
       github: ['https://github.com/Sovlo1/discordbot'],
     },
