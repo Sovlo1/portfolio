@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <header>
+    <!-- <header>
         <div class="top__bar d-flex justify-end flex-align-center fill">
             <nav>
                 <ul class="d-flex flex-align-center">
@@ -18,7 +18,7 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header> -->
     <section class="d-flex flex-align-center justify-center">
         <div class="d-flex flex-align-center justify-space-around fill">
             <article class="about d-flex flex-align-center">
@@ -74,7 +74,7 @@
                 <div class="projects__image d-flex">
                     <img *ngFor="let technos of work.stack" src="{{technos.image}}" alt="">
                 </div>
-                <div class="projects__links d-flex justify-space-around">
+                <div class="projects__links d-flex flex-wrap justify-space-around">
                     <a *ngIf=" work.link" href="{{work.link}}"><button
                             class="btn cursor-pointer">{{work.name}}</button></a>
                     <div *ngFor="let githublinks of work.github; let number = index" class="link">
@@ -85,10 +85,21 @@
         </div>
     </section>
     <section>
-
+        <div class="d-flex flex-align-center fill">
+            <div class="contact d-flex flex-column flex-align-center w-fill">
+                <h2>Me contacter:</h2>
+                <ul>
+                    <li class="d-flex flex-align-center"><i class="fa-regular fa-envelope m-10"></i>Email:
+                        raphael.alves.dev@gmail.com
+                    </li>
+                    <li class="d-flex flex-align-center"><i class="fa-solid fa-phone m-10"></i>Téléphone: 06 15 67 76 27
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
     <footer>
-        <div class="d-flex flex-align-center justify-center fill"><a
+        <div class="d-flex flex-align-center justify-center"><a
                 href="https://www.linkedin.com/in/raphael-alves-21b249174/"><i
                     class="fa-brands fa-linkedin m-10"></i></a><a href="https://github.com/Sovlo1"><i
                     class="fa-brands fa-github m-10"></i></a>
